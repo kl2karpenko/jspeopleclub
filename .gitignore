@@ -1,0 +1,11 @@
+*.DS_Store
+.idea/
+node_modules/
+.cache/
+.yalc/
+dist/
+junit.xml
+src/locales/whitelist*.json
+yalc.lock
+.npm/
+.vscode/
