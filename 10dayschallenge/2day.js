@@ -1,16 +1,23 @@
-// Here are several solutions to find all duplicate elements in an array using JavaScript:
+// Find Duplicates in Array: Write a function to find all duplicate elements in an array.
+//   If you have several solutions it is okay, just send them all!
 //
+//   Example:
+// findDuplicates([1, 2, 2, 3, 4, 4, 5]); // [2, 4]
+
 // ### Method 1: Using a Hash Map (Object)
 // This approach uses a hash map (JavaScript object) to count occurrences of each element and then identifies duplicates.
 
+// O(n)
 function findDuplicates(arr) {
   let counts = {};
   let duplicates = [];
 
   for (let i = 0; i < arr.length; i++) {
     if (counts[arr[i]]) {
+      // counts = { 1: 1, 2: 2,  }
       counts[arr[i]] += 1;
     } else {
+      // counts = { 1: 1, 2: 1,  }
       counts[arr[i]] = 1;
     }
   }
@@ -34,6 +41,7 @@ console.log(findDuplicates([1, 2, 3, 4, 5, 3, 6, 7, 2, 8, 9, 1])); // Output: [1
 // ### Method 2: Using Set and Filter
 // This approach leverages `Set` to keep track of unique elements and `filter()` to find duplicates.
 
+// O(n2)
 function findDuplicates2(arr) {
   let seen = new Set();
   return arr.filter(item => {
@@ -56,6 +64,7 @@ console.log(findDuplicates2([1, 2, 3, 4, 5, 3, 6, 7, 2, 8, 9, 1])); // Output: [
 // ### Method 3: Using a Sorting Approach
 // In this approach, the array is sorted first, then we look for consecutive elements that are the same.
 
+// O(n2)
 function findDuplicates3(arr) {
   arr.sort((a, b) => a - b);
   let duplicates = [];
@@ -78,7 +87,8 @@ console.log(findDuplicates3([1, 2, 3, 4, 5, 3, 6, 7, 2, 8, 9, 1])); // Output: [
 // ### Method 4: Using a Frequency Map with `reduce()`
 // 	This method combines a frequency map with the `reduce()` function to identify duplicates.
 
-function findDuplicates(arr) {
+// O(n)
+function findDuplicates3(arr) {
   let frequency = arr.reduce((acc, item) => {
     acc[item] = (acc[item] || 0) + 1;
     return acc;
@@ -97,6 +107,7 @@ console.log(findDuplicates([1, 2, 3, 4, 5, 3, 6, 7, 2, 8, 9, 1])); // Output: [1
 // ### Method 5: Using Nested Loops (Brute Force)
 // This straightforward approach checks each element against every other element to find duplicates.
 
+// O(n3)
 function findDuplicates4(arr) {
   let duplicates = [];
 

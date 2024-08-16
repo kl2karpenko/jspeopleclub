@@ -1,5 +1,8 @@
-// Here's how you can write a JavaScript function to find all keys in an object that have a specific value:
+// Find Keys with a Specific Value: Write a function to find all keys in an object that have a specific value.
 //
+//   Example:
+// findKeys({ a: 1, b: 2, c: 1 }, 1); // ["a", "c"]
+
 // ### Method 1: Using `for...in` Loop
 
 function findKeys(obj, value) {

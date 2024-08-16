@@ -1,3 +1,8 @@
+// Find Pair with Sum: Find a pair of numbers in an array that adds up to a given sum.
+//
+//   Example:
+// findPairWithSum([1, 2, 3, 4, 5], 9); // [4, 5]
+
 // ### Method 1: Using a Hash Map (Object)
 // This is an efficient approach that uses a hash map to store and check for complements as you iterate through the array.
 
@@ -19,7 +24,7 @@ function findPairWithSum(arr, targetSum) {
 console.log(findPairWithSum([1, 2, 3, 4, 5], 9)); // Output: [4, 5]
 
 // ### Explanation:
-// 	- As you iterate through the array, for each element `arr[i]`, you calculate its complement with respect to the target sum (`targetSum - arr[i]`).
+// - As you iterate through the array, for each element `arr[i]`, you calculate its complement with respect to the target sum (`targetSum - arr[i]`).
 // - If the complement exists in the hash map, you've found your pair.
 // - Otherwise, store the element in the hash map and continue.
 //

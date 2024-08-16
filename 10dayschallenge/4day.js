@@ -1,5 +1,8 @@
-// Here are a few ways to write a JavaScript function to check if a given string is a palindrome:
+// Check for Palindrome: Write a function to check if a given string is a palindrome.
 //
+//   Example:
+// isPalindrome("racecar"); // true
+
 // 	### Method 1: Simple Reverse and Compare
 // This method is straightforward: reverse the string and compare it to the original.
 
